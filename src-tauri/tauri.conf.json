@@ -1,21 +1,20 @@
 {
-  "$schema": "https://schema.tauri.app/config/2.0.0",
-  "productName": "rslide",
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "tauri-app",
   "version": "0.1.0",
-  "identifier": "com.rslide.app",
+  "identifier": "com.tauri-app.app",
   "build": {
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "pnpm build",
     "frontendDist": "../build"
   },
   "app": {
     "windows": [
       {
-        "title": "rslide",
+        "title": "tauri-app",
         "width": 800,
         "height": 600
-        
       }
     ],
     "security": {
