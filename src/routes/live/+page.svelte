@@ -35,21 +35,23 @@
   });
 </script>
 
-<div class="reveal">
-  <div class="slides">
-    <section>
-      <section>Slide v 1</section>
-      <section>Slide v 2</section>
-      <section>Slide v 3</section>
-    </section>
-    <section>
-      Slide 2
+<main>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section>Slide v 1</section>
+        <section>Slide v 2</section>
+        <section>Slide v 3</section>
+      </section>
+      <section>
+        Slide 2
 
-      <aside class="notes">Shhh, these are your private notes 📝</aside>
-    </section>
-    <section>Slide 3</section>
+        <aside class="notes">Shhh, these are your private notes 📝</aside>
+      </section>
+      <section>Slide 3</section>
+    </div>
   </div>
-</div>
+</main>
 
 <style>
   .reveal {

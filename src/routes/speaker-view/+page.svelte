@@ -16,10 +16,12 @@
   };
 </script>
 
-<div>
-  <h1>Speaker View</h1>
-  <button onclick={prev}>prev</button>
-  <button onclick={next}>next</button>
-</div>
+<main>
+  <div>
+    <h1>Speaker View</h1>
+    <button onclick={prev}>prev</button>
+    <button onclick={next}>next</button>
+  </div>
+</main>
 
 <style></style>
