@@ -1,12 +1,15 @@
 <script lang="ts">
   import { WebviewWindow } from "@tauri-apps/api/webviewWindow";
   import { Header } from "$lib/components/header";
-  import { SongSlideEditor } from "$lib/components/song-slide-editor";
-  import Quill from "quill";
+  import {
+    SongSlideCanvas,
+    SongSlideTextEditor,
+  } from "$lib/components/song-slide";
+  import { type OutputBlockData } from "@editorjs/editorjs";
 
   let liveViewWindow: WebviewWindow | undefined = $state();
   let webview: WebviewWindow | undefined = $state();
-  let quill: Quill | undefined = $state();
+  let blocks: OutputBlockData[] = $state([]);
 
   const openLiveViewWindow = () => {
     liveViewWindow = new WebviewWindow("liveViewWindow", {
@@ -37,9 +40,7 @@
     });
   };
 
-  const onTextChange = () => {
-    console.log(quill?.getContents());
-  };
+  $inspect(blocks);
 </script>
 
 <main>
@@ -50,11 +51,15 @@
 
   <div class="container">
     <div class="workspace">
-      <div class="left">left</div>
-      <div class="middle">
-        <SongSlideEditor bind:quill {onTextChange} />
+      <div class="left">
+        <div contenteditable="true">left</div>
       </div>
-      <div class="right">right</div>
+      <div class="middle">
+        <SongSlideTextEditor bind:blocks />
+      </div>
+      <div class="right">
+        <SongSlideCanvas {blocks} />
+      </div>
     </div>
   </div>
 </main>

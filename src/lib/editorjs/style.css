@@ -1,0 +1,17 @@
+.editor-song_lyrics--name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+}
+
+.editor-song_lyrics--name[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  pointer-events: none;
+  color: #999;
+}
+
+.editor-song_lyrics--content[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  pointer-events: none;
+  color: #999;
+}
